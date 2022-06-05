@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>javascript fuction</title>
+  </head>
+  <p id="demo"></p>
+  <body>
+    <script>
+      // function declaration
+      function my_function(val) {
+        document.getElementById("demo").innerHTML = val * val;
+      }
+      my_function(5);
+    </script>
+    <script>
+      // function experssion
+      let x = function () {
+        alert("hello! ");
+      };
+      // we can also assign x to another variable  y
+      // let y = x
+      document.getElementById("demo").innerHTML = x();
+    </script>
+  </body>
+</html>

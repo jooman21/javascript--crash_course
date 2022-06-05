@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>javascript object</title>
+  </head>
+  <h1>creating javascript objects</h1>
+  <p id="demo"></p>
+  <script>
+    var student = {
+      name: "chris",
+      age: 21,
+      studies: "computer science",
+    };
+    // ways of updating properties
+    //student.age = 24;
+    // x = student.age;
+    x = "age";
+    document.getElementById("demo").innerHTML =
+      student.name +
+      " of the age " +
+      student[x] +
+      " studies " +
+      student.studies;
+  </script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>javascript object</title>
+  </head>
+  <h1>creating javascript objects</h1>
+  <p id="demo"></p>
+  <script>
+    // example of getter method
+    var car = {
+      model: "BMW",
+      color: "Heavy blue",
+      fuel_type: "Disel",
+      get fuel() {
+        return this.fuel_type;
+      },
+    };
+    document.getElementById("demo").innerHTML = car.fuel;
+  </script>
+  <script>
+    // example of setter method
+    var car = {
+      model: "AUDI",
+      color: "bright red",
+      fuel_type: "",
+      set fuel(fuel) {
+        this.fuel_type = fuel;
+      },
+    };
+    car.fuel = "petrol";
+    document.getElementById("demo").innerHTML = car.fuel_type;
+  </script>
+</html>

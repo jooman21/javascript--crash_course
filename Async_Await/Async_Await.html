@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>javascript object</title>
+  </head>
+  <h1>javascript Async/Await</h1>
+  <body>
+    <script>
+      let result = function (score) {
+        return new Promise(function (resolve, reject) {
+          console.log("calculation result...");
+          if (score > 50) resolve("congratulation! you have passed");
+          else reject("you have failed");
+        });
+      };
+      let grade = function (response) {
+        return new Promise(function (resolve, reject) {
+          console.log("calculating your grade...");
+          resolve("your grade is A, " + response);
+        });
+      };
+      // this is without aysnc and await
+
+      // result(80)
+      // .then((response) => {
+      // console.log("Results recived");
+      // return grade(response);
+      // })
+      // .then((finalgrade) => {
+      // console.log(finalgrade);
+      // })
+      // .catch((err) => {
+      // console.log(err);
+      // });
+      async function calculateresults() {
+        try {
+          const response = await result(20);
+          console.log("result recived");
+          const finalgrade = await grade(response);
+          console.log(finalgrade);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      calculateresults();
+    </script>
+  </body>
+</html>

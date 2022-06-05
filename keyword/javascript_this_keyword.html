@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>javascript object</title>
+  </head>
+  <h1>javascript this keyword</h1>
+  <body>
+    <!--
+ <script>
+      var value = 50;
+
+      function my_function() {
+        var value = 100;
+        alert("Value: " + value);
+        alert("This value: " + this.value);
+      }
+      my_function();
+    </script>
+   -->
+
+    <!--
+<script>
+      // in object method
+      const random = {
+        name: "jhon",
+        info() {
+          console.log("hi! my name is " + this.name);
+        },
+      };
+      random.info();
+    </script>
+   -->
+    <script>
+      const random = {
+        name: "Tutorial",
+        video: ["javascript", "this", "keyword"],
+        info() {
+          this.video.forEach(function (tag) {
+            console.log(this.name, tag);
+          }, this);
+        },
+      };
+      random.info();
+    </script>
+  </body>
+</html>

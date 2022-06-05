@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>javascript fuction</title>
+  </head>
+  <p id="demo"></p>
+  <body>
+    <script>
+      // using function constructor Function
+      var myfunction = new Function("a", "b", "return a+b");
+      var x = myfunction(2, 3);
+      document.getElementById("demo").innerHTML = "The sum is " + x;
+    </script>
+  </body>
+</html>

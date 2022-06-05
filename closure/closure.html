@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>javascript object</title>
+  </head>
+  <h1>creating javascript objects</h1>
+  <p id="demo"></p>
+  <body>
+    <script>
+      var a = 10;
+      function first_func() {
+        var b = 20;
+        function second_func() {
+          var c = 20 + a + b;
+          return c;
+        }
+        return second_func();
+      }
+      var sum = first_func();
+      document.write("The sum is " + sum + "<br>");
+    </script>
+  </body>
+</html>
