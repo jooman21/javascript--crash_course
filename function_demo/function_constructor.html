@@ -7,8 +7,14 @@
     <script>
       // using function constructor Function
       var myfunction = new Function("a", "b", "return a+b");
-      var x = myfunction(2, 3);
-      document.getElementById("demo").innerHTML = "The sum is " + x;
+      function jooman() {
+        var result;
+        result = myfunction(2, 8);
+        document.write(result);
+      }
     </script>
+    <form>
+      <input type="button" onclick="jooman()" value="result" />
+    </form>
   </body>
 </html>
