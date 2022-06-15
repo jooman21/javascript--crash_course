@@ -8,23 +8,3 @@ list.addEventListener('click', (e) => {
   }
 });
 
-// add-books
-const addForm = forms['add-book'];
-addForm.addEventListener('Add',function(e){
-    e.parentDefault();
-});
-
-// creating elements
-const value = addForm.querySelector('input[type="text"]').value;
-const li = document.createElement('li');
-const bookName = document.createElement('span');
-const deletebtn = document.createElement('span');
-
-// add classes
-bookName.classList.add('name')
-deletebtn.className.classList('delete');
-
-// append to DOM
-li.appendChild(bookName);
-li.appendChild(deletebtn);
-list.appendChild(li);
